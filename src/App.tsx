@@ -4,29 +4,42 @@ import beachwork from './img/beach-work.jpg';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-gray-100 sm:bg-green-500 md:bg-red-500 lg:bg-yellow-500 xl:bg-pink-500">
-      <div className="px-8 py-12 max-w-md mx-auto">
-        <img className="h-10" src={logo} alt="Workcation"></img>
-        <img
-          className="mt-6 rounded-lg shadow-xl"
-          src={beachwork}
-          alt="Woman workcationing on the beach"
-        ></img>
-        <h1 className="mt-6 text-2xl font-bold text-gray-900 leading-tight">
-          You can work from anywhere.
-          <span className="text-indigo-500">Take advantage of it.</span>
-        </h1>
-        <p className="mt-2 text-gray-700">
-          Workcation helps you find work-friendly rentals in beautiful locations
-          so you can enjoy some nice weather even when you're not on vacation.
-        </p>
-        <div className="mt-4">
-          <a
-            href="#"
-            className="inline-block px-5 py-3 rounded-lg shadow-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold"
-          >
-            Book your escape
-          </a>
+    <div className="bg-gray-300">
+      <div className="bg-gray-100 flex">
+        <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
+          <div className="xl:max-w-lg xl:ml-auto">
+            <img className="h-10" src={logo} alt="Workcation"></img>
+            <img
+              className="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden"
+              src={beachwork}
+              alt="Woman workcationing on the beach"
+            ></img>
+            <h1 className="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
+              You can work from anywhere.
+              <br className="hidden lg:inline"></br>
+              <span className="text-indigo-500">Take advantage of it.</span>
+            </h1>
+            <p className="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
+              Workcation helps you find work-friendly rentals in beautiful
+              locations so you can enjoy some nice weather even when you're not
+              on vacation.
+            </p>
+            <div className="mt-4 sm:mt-6">
+              <a
+                href="#"
+                className="inline-block px-5 py-3 rounded-lg shadow-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold sm:text-base"
+              >
+                Book your escape
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="hidden lg:block lg:w-1/2 lg:relative">
+          <img
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            src={beachwork}
+            alt="Woman workcationing on the beach"
+          ></img>
         </div>
       </div>
     </div>
