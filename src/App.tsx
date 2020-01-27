@@ -1,8 +1,53 @@
 import React from 'react';
 import logo from './img/logo.svg';
 import beachwork from './img/beach-work.jpg';
+import DestinationCard from './components/DestinationCard';
 
 const App: React.FC = () => {
+  const popularDestinations = [
+    {
+      city: 'Toronto',
+      averagePrice: 120,
+      propertyCount: 76,
+      imageUrl: require('./img/toronto.jpg'),
+      imageAlt: 'Toronto skyline'
+    },
+    {
+      city: 'Malibu',
+      averagePrice: 215,
+      propertyCount: 43,
+      imageUrl: require('./img/malibu.jpg'),
+      imageAlt: 'Cliff in Malibu'
+    },
+    {
+      city: 'Chicago',
+      averagePrice: 130,
+      propertyCount: 115,
+      imageUrl: require('./img/chicago.jpg'),
+      imageAlt: 'Chicago skyline'
+    },
+    {
+      city: 'Seattle',
+      averagePrice: 135,
+      propertyCount: 63,
+      imageUrl: require('./img/seattle.jpg'),
+      imageAlt: 'Seattle skyline'
+    },
+    {
+      city: 'Colorado',
+      averagePrice: 85,
+      propertyCount: 47,
+      imageUrl: require('./img/colorado.jpg'),
+      imageAlt: 'Lake in Colorado'
+    },
+    {
+      city: 'Miami',
+      averagePrice: 115,
+      propertyCount: 86,
+      imageUrl: require('./img/miami.jpg'),
+      imageAlt: 'Beach in Miami'
+    }
+  ];
   return (
     <div className="bg-gray-300">
       <div className="bg-gray-100 flex">
@@ -40,6 +85,28 @@ const App: React.FC = () => {
             src={beachwork}
             alt="Woman workcationing on the beach"
           ></img>
+        </div>
+      </div>
+      <div>
+        <div className="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 py-8">
+          <h2 className="text-xl text-gray-900">Popular destinations</h2>
+          <p className="text-gray-600">
+            A selection of great work-friendly cities with lots to see and
+            explore.
+          </p>
+          <div className="flex flex-wrap -mx-4">
+            <div className="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
+              {popularDestinations.map(destination => (
+                <DestinationCard
+                  city={destination.city}
+                  averagePrice={destination.averagePrice}
+                  propertyCount={destination.propertyCount}
+                  imageUrl={destination.imageUrl}
+                  imageAlt={destination.imageAlt}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
