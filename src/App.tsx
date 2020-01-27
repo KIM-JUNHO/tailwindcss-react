@@ -25,10 +25,7 @@ const App: React.FC = () => {
               on vacation.
             </p>
             <div className="mt-4 sm:mt-6">
-              <a
-                href="#"
-                className="inline-block px-5 py-3 rounded-lg shadow-lg bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 focus:outline-none focus:shadow-outline text-sm text-white uppercase tracking-wider font-semibold sm:text-base"
-              >
+              <a href="#" className="btn">
                 Book your escape
               </a>
             </div>
