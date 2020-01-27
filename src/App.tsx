@@ -1,12 +1,11 @@
 import React from 'react';
 import logo from './img/logo.svg';
 import beachwork from './img/beach-work.jpg';
-import './styles.css';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-gray-100">
-      <div className="px-8 py-12">
+    <div className="bg-gray-100 sm:bg-green-500 md:bg-red-500 lg:bg-yellow-500 xl:bg-pink-500">
+      <div className="px-8 py-12 max-w-md mx-auto">
         <img className="h-10" src={logo} alt="Workcation"></img>
         <img
           className="mt-6 rounded-lg shadow-xl"
